@@ -1,0 +1,21 @@
+{ 
+  "name": "shared-root",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "yarn workspace backend dev",
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev:all": "concurrently \"yarn dev:backend\" \"yarn dev:frontend\"",
+    "test": "echo \"Run tests from individual workspaces\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "devDependencies": {}
+}
